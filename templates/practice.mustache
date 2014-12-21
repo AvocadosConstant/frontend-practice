@@ -1,44 +1,28 @@
 <!-- <!DOCTYPE html> -->
 <html>
-
 	<head>
 		<title>Practice</title>
-
 		<!-- included sources -->		
-		
 		<link rel="stylesheet" type="text/css" href="../css/textfield.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		
-
 	</head>
 
-
 	<body>
-
+		
 		<div class="window">
-			<div class="window-header">
-				Hello, {{name}}.
-			</div>
-
-			<br>
-
+			<div class="window-header">Hello, {{name}}.</div><br>
+			
 			<div class="window-textfield-container">
 				{{#fields}}
 					<input type="text" placeholder="thing {{text}}" id="{{text}}" class="textfield" /><br>
 				{{/fields}}
 			</div>
-
 			<input type="submit" class="button"></button>
-
-			<div id="testDiv"></div>
-			
+			<!--<div id="testDiv"></div>-->
 		</div>
 		
 		<script src="/templates/practice.js"></script>
-
 	</body>
-
 </html>

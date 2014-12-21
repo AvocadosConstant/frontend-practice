@@ -10,6 +10,7 @@ class Controller_Practice_Actions {
 	public function route(){
 		
 		//handle POSTs and GETs
+		echo implode(" ", $_POST['fieldData']);
 	
 	}
 

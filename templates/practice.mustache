@@ -5,10 +5,13 @@
 		<title>Practice</title>
 
 		<!-- included sources -->		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
 		<link rel="stylesheet" type="text/css" href="../css/textfield.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
 
 	</head>
 
@@ -29,35 +32,13 @@
 			</div>
 
 			<input type="submit" class="button"></button>
+
+			<div id="testDiv"></div>
+			
 		</div>
 		
-		<!--<script src="practice.js"></script>-->
-		<script type="text/javascript">
-			$("input[type=submit]").click(function(){
-				
-				var fieldData = {};
-				
-				$('input[type=text]').each(function() {
-				    fieldData[$(this).attr('id')] = $(this).val();
-				});
-
-				for (var i in fieldData) {
-				  if(fieldData[i] == ""){isFull = false;}
-				}
-
-				if(isFull){
-					alert("POST");
-					$.post('../controller/practice_actions.php', {fieldData: fieldData}, function(data){
-						//$('#testdiv').html(data);
-					});
-				}
-				else{
-					alert("At least one of your fields is blank! Please fill out all fields.")
-				}
-			});
-		</script>
+		<script src="/templates/practice.js"></script>
 
 	</body>
-
 
 </html>

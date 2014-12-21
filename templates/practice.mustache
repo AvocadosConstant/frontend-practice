@@ -24,13 +24,38 @@
 
 			<div class="window-textfield-container">
 				{{#fields}}
-					<input type="text" placeholder="{{text}}" class="textfield"></input><br>
+					<input type="text" placeholder="thing {{text}}" id="{{text}}" class="textfield" /><br>
 				{{/fields}}
 			</div>
-			
 
 			<input type="submit" class="button"></button>
 		</div>
+		
+		<!--<script src="practice.js"></script>-->
+		<script type="text/javascript">
+			$("input[type=submit]").click(function(){
+				
+				var fieldData = {};
+				
+				$('input[type=text]').each(function() {
+				    fieldData[$(this).attr('id')] = $(this).val();
+				});
+
+				for (var i in fieldData) {
+				  if(fieldData[i] == ""){isFull = false;}
+				}
+
+				if(isFull){
+					alert("POST");
+					$.post('../controller/practice_actions.php', {fieldData: fieldData}, function(data){
+						//$('#testdiv').html(data);
+					});
+				}
+				else{
+					alert("At least one of your fields is blank! Please fill out all fields.")
+				}
+			});
+		</script>
 
 	</body>
 

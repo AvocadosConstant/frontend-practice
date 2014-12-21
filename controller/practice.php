@@ -19,15 +19,12 @@ class Controller_Practice extends Controller_Base {
 		    'currentime'=>date('H:i:s'),
 
 		    'fields'=>array(
-		    	array('text'=>"thing 1"), 
-		    	array('text'=>"thing 2"),
-		    	array('text'=>"thing 3")
+		    	array('text'=>"1"), 
+		    	array('text'=>"2"),
+		    	array('text'=>"3")
 		    )
 
 		);
         return $data;
     }
-
-
-
 }

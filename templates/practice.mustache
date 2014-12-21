@@ -16,7 +16,20 @@
 	<body>
 
 		<div class="window">
-			Hello, {{name}}.
+			<div class="window-header">
+				Hello, {{name}}.
+			</div>
+
+			<br>
+
+			<div class="window-textfield-container">
+				{{#fields}}
+					<input type="text" placeholder="{{text}}" class="textfield"></input><br>
+				{{/fields}}
+			</div>
+			
+
+			<input type="submit" class="button"></button>
 		</div>
 
 	</body>
